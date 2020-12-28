@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    font-size: 2rem;
+    color: white;
+    margin: 0rem 1rem;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+.navbar .searchbox{
+    margin: 0rem 1rem;
+}
+.searchbarbox {
+    margin: 0rem 1rem;
+    display: flex;
+    align-items: center;
+
+}
+.searchbarbox .searchbox{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 0.2rem;
+}
+.searchbarbox .searchbox:focus{
+    border-bottom: 1px solid green;
+}
+.searchbtn{
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 500px;
+    background: rgb(18, 78, 18);
+    padding: 0.3rem 2rem;
+}
+.searchbtn:hover{
+    background-color: rgb(16, 99, 16);
+}
+.imgtag{
+    border-radius: 10px;
+    width: 300px;
+    transition:width 0.3s ease-in-out;
+}
+.boxfood{
+    border-radius: 10px;
+    border: 1px solid rgba(172, 255, 47, 0.308);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 0.6rem;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.boxfood:hover{
+    box-shadow: 0.5px 0.5px 15px 0px rgba(255, 255, 255, 0.274);
+}
+.foodlist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.foodname{
+    margin: 1rem;
+    font-size: 1rem;
+    
+}
+.foodlink{
+    max-width: 200px;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+.header{
+    height: 80vh;
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.548)), url(./bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.simplec{
+    font-size: 1.7rem;
+    color: white;
+}
+.contentbox{
+    line-height: 2.5;
+    height: 60%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.contentbox p{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: white;
+}
+
