@@ -1,20 +1,43 @@
-import React from "react";
 import style from "./searchbar.module.css";
-import {useContext,useEffect,useState} from "react"
-import {foodinfo} from "./App"
-function Displayfood({name,img}) {
-    const [foodnamer, setfoodnamer] = useState(foodinfo)
-    const foods = useContext(foodinfo)
+import { useEffect, useState } from "react";
+import FoodItem from "./FoodItem";
+function Displayfood({apiKey}) {
+  const [foodrec, setfoodrec] = useState([]);
+
+  useEffect(() => {
+    const renderdata = async () => {
+      const req = await fetch(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`
+      );
+      const data = await req.json();
+      setfoodrec(data.results);
+    };
+    renderdata();
+    console.log(foodrec);
+  }, []);
+
   return (
-    <div className={style.boxfood}>
-        <h1>nothing</h1>
-      {/* <img
-        className={style.imgtag}
-        src={img}
-        alt=""
-      />
-      <Link className={style.foodlink}><h1 className={style.foodname}>{name}</h1></Link> */}
-    </div>
+    <>
+      <div className={style.mainapp}>
+        <div className={style.randomtag}>
+          <i className="fas fa-drumstick-bite"></i>
+          <h1 className={style.tagrecipie}>SOME Random Recipies</h1>
+          <i className="fas fa-drumstick-bite"></i>
+        </div>
+      </div>
+      <div className={style.boxfood}>
+        {foodrec.map((item) => {
+          return (
+            <FoodItem
+              id={item.id}
+              key={item.id}
+              name={item.title}
+              img={item.image}
+            ></FoodItem>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./searchbar.module.css";
-import { foodprovider } from "./App";
-function Searchbar() {
-  const [fooddata, setfooddata] = useState([]);
-  const [foodname, setfoodname] = useState("");
+
+function Searchbar({ setfoodname }) {
+  let history = useHistory();
+  const [foodinfo, setfoodinfo] = useState("");
+
+  const sentFoodname = () => {
+    setfoodname(foodinfo);
+    history.push("/results");
+  };
 
   const searchHandle = (e) => {
-    setfoodname(e.target.value);
+    setfoodinfo(e.target.value);
   };
-  const sentFoodname = ()=>{
-      <foodprovider value ={foodname}></foodprovider>
-  }
 
   return (
     <React.Fragment>

@@ -1,117 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-html{
-    font-family: 'Poppins', sans-serif;
+html {
+  font-size: 62.5%;
+  background-color: rgba(128, 128, 128, 0.26);
+  font-family: "Poppins", sans-serif;
 }
-.logo{
-    font-size: 2rem;
-    color: white;
-    margin: 0rem 1rem;
+.logo {
+  font-size: 3.6rem;
+  color: white;
+  margin: 0rem 1rem;
 }
-.navbar{
-    background-color: rgba(0, 0, 0, 0.452);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    background-position: center;
-    background-size: cover;
-    border-radius: 5px;
+.navbar {
+  background-color: rgba(0, 0, 0, 0.452);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
 }
-.navbar .searchbox{
-    margin: 0rem 1rem;
+.navbar .searchbox {
+  margin: 0rem 1rem;
 }
 .searchbarbox {
-    margin: 0rem 1rem;
-    display: flex;
-    align-items: center;
+  margin: 0rem 1rem;
+  display: flex;
+  align-items: center;
+}
+.searchbarbox .searchbox {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  padding: 0.2rem;
+}
+.searchbarbox .searchbox:focus {
+  border-bottom: 1px solid green;
+}
+.searchbtn {
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 500px;
+  background: rgb(18, 78, 18);
+  padding: 0.3rem 2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.searchbtn:hover {
+  background-color: rgb(16, 99, 16);
+}
+.imgtag {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+.boxfood {
+  border-radius: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.6rem;
+}
+.fooditembox {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: box-shadow 0.2s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.384);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+.fooditembox:hover {
+  box-shadow: 0.5px 0.5px 10px 0px rgba(0, 0, 0, 0.514);
+}
+.foodlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.foodname {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+.foodlink {
+  max-width: 200px;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
+.header {
+  height: 80vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.719),
+      rgba(0, 0, 0, 0.548)
+    ),
+    url(./bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.simplec {
+  font-size: 2.5rem;
+  color: white;
+}
+.contentbox {
+  line-height: 2.5;
+  height: 60%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.contentbox p {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: white;
+}
+.tagrecipie {
+  color: brown;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem;
+}
+.randomtag {
+  display: flex;
+  justify-content: center;
+}
+.randomtag i {
+  color: brown;
+  margin: 1rem;
+  font-size: 5rem;
+}
+.foodtag {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 3rem;
+}
 
+.btnback {
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 500px;
+  background: rgb(18, 78, 18);
+  border: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin: 1rem 2rem;
+  transition: background-color 0.2s ease-in-out;
 }
-.searchbarbox .searchbox{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid white;
-    font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    padding: 0.2rem;
+.btnback:hover {
+  background-color: rgb(16, 99, 16);
 }
-.searchbarbox .searchbox:focus{
-    border-bottom: 1px solid green;
-}
-.searchbtn{
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 500px;
-    background: rgb(18, 78, 18);
-    padding: 0.3rem 2rem;
-}
-.searchbtn:hover{
-    background-color: rgb(16, 99, 16);
-}
-.imgtag{
-    border-radius: 10px;
-    width: 300px;
-    transition:width 0.3s ease-in-out;
-}
-.boxfood{
-    border-radius: 10px;
-    border: 1px solid rgba(172, 255, 47, 0.308);
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    margin: 0.6rem;
-    transition: box-shadow 0.2s ease-in-out;
-}
-.boxfood:hover{
-    box-shadow: 0.5px 0.5px 15px 0px rgba(255, 255, 255, 0.274);
-}
-.foodlist{
-    display: flex;
-    flex-wrap: wrap;
-}
-.foodname{
-    margin: 1rem;
-    font-size: 1rem;
-    
-}
+
 .foodlink{
-    max-width: 200px;
-    padding: 0;
-    text-decoration: none;
-    color: white;
+  display: block;
+  color: black;
 }
-.header{
-    height: 80vh;
-    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.548)), url(./bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+@media (max-width:500px){
+  html{
+    font-size: 46%;
+  }
 }
-.simplec{
-    font-size: 1.7rem;
-    color: white;
-}
-.contentbox{
-    line-height: 2.5;
-    height: 60%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-.contentbox p{
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    color: white;
-}
-
