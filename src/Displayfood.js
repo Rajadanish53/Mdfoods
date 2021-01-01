@@ -1,32 +1,31 @@
-import style from "./searchbar.module.css";
-import { useEffect, useState } from "react";
-import FoodItem from "./FoodItem";
+import style from './searchbar.module.css'
+import { useEffect, useState } from 'react'
+import FoodItem from './FoodItem'
 function Displayfood({ apiKey }) {
-  const [foodrec, setfoodrec] = useState([]);
+  const [foodrec, setfoodrec] = useState([])
   let randomfoods = [
-    "burger",
-    "pizza",
-    "pista",
-    "cake",
-    "icecream",
-    "peanuts",
-    "chips",
-    "smoothie",
-  ];
-  let randomnum = Math.random() * 8;
+    'burger',
+    'pizza',
+    'pista',
+    'cake',
+    'icecream',
+    'peanuts',
+    'chips',
+    'smoothie',
+  ]
+  let randomnum = Math.random() * 8
   useEffect(() => {
     const renderdata = async () => {
       const req = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${
           randomfoods[Math.round(randomnum)]
         }`
-      );
-      const data = await req.json();
-      console.log(data);
-      setfoodrec(data.results);
-    };
-    renderdata();
-  },[]);
+      )
+      const data = await req.json()
+      setfoodrec(data.results)
+    }
+    renderdata()
+  }, [])
 
   return (
     <>
@@ -38,7 +37,7 @@ function Displayfood({ apiKey }) {
         </div>
       </div>
       <div className={style.boxfood}>
-        {foodrec.map(item => {
+        {foodrec.map((item) => {
           return (
             <FoodItem
               id={item.id}
@@ -46,11 +45,11 @@ function Displayfood({ apiKey }) {
               name={item.title}
               img={item.image}
             />
-          );
+          )
         })}
       </div>
     </>
-  );
+  )
 }
 
-export default Displayfood;
+export default Displayfood
