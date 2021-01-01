@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ClickedFood from "./ClickedFood";
 
 function App() {
-  const apiKey = "6b5bbbb59b7740e2a9db2109d8a66d50";
+  const apiKey = process.env.REACT_APP_API;
   const [foodname, setfoodname] = useState("");
   return (
     <BrowserRouter>
