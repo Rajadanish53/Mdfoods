@@ -70,9 +70,9 @@ function ClickedFood({ setfoodname, apiKey }) {
                 <div className={clicked.ingredientsbox} key={Math.random()*1000+5}>
                   <h1 className={clicked.ingredientstag} key={Math.random()*1000+7}>Ingredients</h1>
                   <ol className={clicked.ingredientslist} key={Math.random()*1000+6}>
-                    {item.ingredients.map((ingred) => {
+                  { item.ingredients.length>0 ?item.ingredients.map((ingred) => {
                       return <li key={ingred.id}>{ingred.name}</li>;
-                    })}
+                    }) : "No Ingredients Needed"}
                   </ol>
                 </div>
 
@@ -81,7 +81,7 @@ function ClickedFood({ setfoodname, apiKey }) {
                   <ol className={clicked.equipmentlist}>
                   { item.equipment.length>0 ?item.equipment.map((equips) => {
                       return <li key={equips.id}>{equips.name}</li>;
-                    }) : "no equipment needed"}
+                    }) : "No Equipment Needed"}
                   </ol>
                 </div>
                 <h1 className={clicked.proceduretag}>Procedure</h1>
