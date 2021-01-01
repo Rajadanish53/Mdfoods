@@ -36,7 +36,7 @@ function Searched({ apiKey, foodname, setfoodname }) {
             foodsearched.results.length > 0 &&
             `Total Results Found ${foodsearched.results.length}`}
           {foodname.length > 1 &&
-            foodsearched.results.length == 0 &&
+            foodsearched.results.length === 0 &&
             "No Results Found"}
         </p>
       </h1>

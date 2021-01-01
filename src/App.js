@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ClickedFood from "./ClickedFood";
 
 function App() {
-  const apiKey = process.env.REACT_APP_API;
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [foodname, setfoodname] = useState("");
   return (
     <BrowserRouter>
@@ -22,7 +22,7 @@ function App() {
             setfoodname={setfoodname}
           />
         </Route>
-        <Route exact path="/food/:id/:img">
+        <Route exact path="/food/:id/:name">
           <ClickedFood setfoodname={setfoodname} apiKey={apiKey} />
         </Route>
         <Route exact path="/:anything">

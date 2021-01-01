@@ -25,8 +25,8 @@ function ClickedFood({ setfoodname, apiKey }) {
     },
   ]);
   let history = useHistory();
-  const { id, img } = useParams();
-  console.log(id, img);
+  const { id, name } = useParams();
+  console.log(id, name);
 
   useEffect(() => {
     const getData = async () => {
@@ -34,6 +34,7 @@ function ClickedFood({ setfoodname, apiKey }) {
         `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`
       );
       const res = await req.json();
+      console.log(res)
       setinfo(res);
     };
     getData();
@@ -50,38 +51,37 @@ function ClickedFood({ setfoodname, apiKey }) {
     };
     getalldata();
   }, [id, info]);
-  console.log(alldata);
   return (
     <>
       <Searchbar setfoodname={setfoodname} />
       <button onClick={() => history.push("/")} className={style.btnback}>
         Go Home Page
       </button>
-      <div className={clicked.outsidebox}>
-        <img className={style.imgtag} src={img} alt="" />
+      <div className={clicked.outsidebox} key={Math.random()*1000+1}>
+        <h1 className={style.recipiename} key={Math.random()*1000+2}>{name}</h1>
         {alldata.map((item) => {
           if (item.number !== "") {
             return (
-              <div className={clicked.mainbox} key={item.id}>
-                <h1 className={clicked.stepnumber}>
+              <div className={clicked.mainbox} key={Math.random()*1000+3}>
+                <h1 className={clicked.stepnumber} key={Math.random()*1000+4}>
                   Step Number : {item.number}
                 </h1>
 
-                <div className={clicked.ingredientsbox}>
-                  <h1 className={clicked.ingredientstag}>Ingredients</h1>
-                  <ol className={clicked.ingredientslist}>
+                <div className={clicked.ingredientsbox} key={Math.random()*1000+5}>
+                  <h1 className={clicked.ingredientstag} key={Math.random()*1000+7}>Ingredients</h1>
+                  <ol className={clicked.ingredientslist} key={Math.random()*1000+6}>
                     {item.ingredients.map((ingred) => {
                       return <li key={ingred.id}>{ingred.name}</li>;
                     })}
                   </ol>
                 </div>
 
-                <div className={clicked.equipmentsbox}>
-                  <h1 className={clicked.equipmenttag}>Equipment</h1>
+                <div className={clicked.equipmentsbox} key={Math.random()*1000+8}>
+                  <h1 className={clicked.equipmenttag} key={Math.random()*1000+9}>Equipment</h1>
                   <ol className={clicked.equipmentlist}>
-                    {item.equipment.map((equips) => {
+                  { item.equipment.length>0 ?item.equipment.map((equips) => {
                       return <li key={equips.id}>{equips.name}</li>;
-                    })}
+                    }) : "no equipment needed"}
                   </ol>
                 </div>
                 <h1 className={clicked.proceduretag}>Procedure</h1>

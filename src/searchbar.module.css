@@ -178,6 +178,13 @@ html {
   display: block;
   color:white;
 }
+.recipiename{
+  border-bottom: 1px solid crimson;
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: crimson;
+  margin: 1rem;
+}
 @media (max-width:500px){
   html{
     font-size: 46%;
