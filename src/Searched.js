@@ -35,6 +35,9 @@ function Searched({ apiKey, foodname, setfoodname }) {
           {foodname !== "" &&
             foodsearched.results.length > 0 &&
             `Total Results Found ${foodsearched.results.length}`}
+          {foodname.length > 1 &&
+            foodsearched.results.length == 0 &&
+            "No Results Found"}
         </p>
       </h1>
       <div className={style.boxfood}>
