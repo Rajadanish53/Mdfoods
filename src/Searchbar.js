@@ -18,7 +18,7 @@ function Searchbar({ setfoodname }) {
   return (
     <React.Fragment>
       <nav className={styles.navbar}>
-        <h1 className={styles.logo}>Foodz Hub</h1>
+        <h1 className={styles.logo}>MD Foods</h1>
         <div className={styles.searchbarbox}>
           <button onClick={sentFoodname} className={styles.searchbtn}>
             Search

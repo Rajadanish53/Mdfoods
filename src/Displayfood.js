@@ -1,7 +1,7 @@
 import style from "./searchbar.module.css";
 import { useEffect, useState } from "react";
 import FoodItem from "./FoodItem";
-function Displayfood({apiKey}) {
+function Displayfood({ apiKey }) {
   const [foodrec, setfoodrec] = useState([]);
 
   useEffect(() => {
@@ -13,8 +13,7 @@ function Displayfood({apiKey}) {
       setfoodrec(data.results);
     };
     renderdata();
-    console.log(foodrec);
-  }, []);
+  },[apiKey]);
 
   return (
     <>
@@ -33,7 +32,7 @@ function Displayfood({apiKey}) {
               key={item.id}
               name={item.title}
               img={item.image}
-            ></FoodItem>
+            />
           );
         })}
       </div>

@@ -1,0 +1,51 @@
+html {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.mainbox {
+  text-align: justify;
+  width: 80%;
+  border-radius: 30px;
+  color: white;
+  line-height: 1.8;
+  padding: 3.4rem;
+  margin:2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: crimson;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.644);
+}
+.equipmentsbox,.ingredientsbox,.stepsbox {
+  border-bottom: 2px dashed white;
+  width: 60%;
+  padding: 1.2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.proceduretag {
+  padding: 1.2rem;
+  font-size: 2.8rem;
+}
+.stepinfo {
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.ingredientslist li {
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+.equipmentlist li {
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+.outsidebox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -12,17 +12,21 @@ html {
 }
 .logo {
   font-size: 3.6rem;
-  color: white;
+  color: crimson;
   margin: 0rem 1rem;
 }
 .navbar {
-  background-color: rgba(0, 0, 0, 0.452);
+  background-color:rgba(0, 0, 0, 0.315);
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
+}
+.resultcount {
+  margin: 2rem;
+  font-size: 2rem;
 }
 .navbar .searchbox {
   margin: 0rem 1rem;
@@ -37,12 +41,12 @@ html {
   border: none;
   border-bottom: 1px solid white;
   font-size: 1.8rem;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(165, 42, 42, 0);
   color: white;
   padding: 0.2rem;
 }
 .searchbarbox .searchbox:focus {
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid crimson;
 }
 .searchbtn {
   font-size: 1.6rem;
@@ -50,18 +54,17 @@ html {
   cursor: pointer;
   border: none;
   border-radius: 500px;
-  background: rgb(18, 78, 18);
+  background: crimson;
   padding: 0.3rem 2rem;
   transition: background-color 0.2s ease-in-out;
 }
 .searchbtn:hover {
-  background-color: rgb(16, 99, 16);
+  background-color:rgb(161, 15, 45);
 }
 .imgtag {
   object-fit: cover;
   border-radius: 10px;
   width: 100%;
-  transition: width 0.3s ease-in-out;
 }
 .boxfood {
   border-radius: 20px;
@@ -76,7 +79,7 @@ html {
   padding: 1rem;
   border-radius: 20px;
   transition: box-shadow 0.2s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.384);
+  background-color: crimson;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +137,7 @@ html {
   color: white;
 }
 .tagrecipie {
-  color: brown;
+  color: crimson;
   font-size: 3rem;
   text-align: center;
   margin: 1rem;
@@ -144,7 +147,7 @@ html {
   justify-content: center;
 }
 .randomtag i {
-  color: brown;
+  color: crimson;
   margin: 1rem;
   font-size: 5rem;
 }
@@ -159,7 +162,7 @@ html {
   color: white;
   cursor: pointer;
   border-radius: 500px;
-  background: rgb(18, 78, 18);
+  background: crimson;
   border: none;
   padding: 0.5rem 1rem;
   position: relative;
@@ -167,12 +170,12 @@ html {
   transition: background-color 0.2s ease-in-out;
 }
 .btnback:hover {
-  background-color: rgb(16, 99, 16);
+  background-color: rgb(161, 15, 45);
 }
 
 .foodlink{
   display: block;
-  color: black;
+  color:white;
 }
 @media (max-width:500px){
   html{
