@@ -8,21 +8,21 @@ import Searchbar from "./Searchbar";
 function Searched({ apiKey, foodname, setfoodname }) {
   let history = useHistory();
   const [foodsearched, setfoodsearched] = useState({
-    results:[]
+    results: [],
   });
   useEffect(() => {
     const renderdata = async () => {
       const req = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${foodname}`
       );
-      console.log(req + "request log")
+      console.log(req + "request log");
       const data = await req.json();
-      console.log(data + "data log")
+      console.log(data + "data log");
       setfoodsearched(data);
     };
     renderdata();
   }, [foodname, apiKey]);
-  console.log(foodsearched);
+  console.log(foodsearched.results);
   return (
     <>
       <Searchbar setfoodname={setfoodname} />
@@ -31,16 +31,22 @@ function Searched({ apiKey, foodname, setfoodname }) {
       </button>
       <h1 className={style.foodtag}>
         {foodname ? foodname : "Random Recipies"}
-        <p className={style.resultcount}>{foodsearched ? `Total Results Found ${foodsearched.number}`:null}</p>
+        <p className={style.resultcount}>
+          {foodname !== "" &&
+            foodsearched.results.length > 0 &&
+            `Total Results Found ${foodsearched.results.length}`}
+        </p>
       </h1>
       <div className={style.boxfood}>
-        {foodsearched.results.map(item=>{
-          return <FoodItem
-          id={item.id}
-          key={item.id}
-          name={item.title}
-          img={item.image}
-        ></FoodItem>
+        {foodsearched.results.map((item) => {
+          return (
+            <FoodItem
+              id={item.id}
+              key={item.id}
+              name={item.title}
+              img={item.image}
+            ></FoodItem>
+          );
         })}
       </div>
     </>
