@@ -32,7 +32,7 @@ function Displayfood({ apiKey }) {
       <div className={style.mainapp}>
         <div className={style.randomtag}>
           <i className="fas fa-drumstick-bite"></i>
-          <h1 className={style.tagrecipie}>SOME Random Recipies</h1>
+          <h1 className={style.tagrecipie}>SOME Random Recipes</h1>
           <i className="fas fa-drumstick-bite"></i>
         </div>
       </div>
